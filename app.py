@@ -1,4 +1,4 @@
-%%writefile /content/VibeVoice/app.py
+# %%writefile /content/VibeVoice/app.py
 import sys
 import os
 import gradio as gr
@@ -216,7 +216,7 @@ def ui():
           outputs=[audio_output, status_output]
       )
   return demo
-demo=ui()
+# demo=ui()
 # demo.launch()
 
 import click
