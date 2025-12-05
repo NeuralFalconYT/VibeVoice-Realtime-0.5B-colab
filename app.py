@@ -55,8 +55,8 @@ class VoiceMapper:
 # 3. MODEL LOADING
 # ==========================================
 print("⏳ Loading Model...")
-if os.path.exists("/content/models/VibeVoice-Realtime-0.5B/model.safetensors"):
-  MODEL_PATH = "/content/VibeVoice/models/VibeVoice-Realtime-0.5B"
+if os.path.exists("./models/VibeVoice-Realtime-0.5B/model.safetensors"):
+  MODEL_PATH = "./VibeVoice/models/VibeVoice-Realtime-0.5B"
   print("✅ Model loaded from local storage.")
 else:
   MODEL_PATH = "microsoft/VibeVoice-Realtime-0.5B"
@@ -192,7 +192,7 @@ def ui():
           with gr.Column():
               audio_output = gr.Audio(label="Generated Audio", type="filepath")
               status_output = gr.HTML()
-      with gr.Accordion("Examples", open=False):
+      with gr.Accordion("Examples", open=True):
         gr.Examples(
             examples = [
       ["Good morning! I hope your day is off to a wonderful start.", "en-Carter_man", 1.5],        # cheerful
