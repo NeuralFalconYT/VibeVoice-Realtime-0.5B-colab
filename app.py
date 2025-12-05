@@ -54,12 +54,7 @@ class VoiceMapper:
 # ==========================================
 # 3. MODEL LOADING
 # ==========================================
-print("⏳ Loading Model...")
-if os.path.exists("./models/VibeVoice-Realtime-0.5B/model.safetensors"):
-  MODEL_PATH = "./VibeVoice/models/VibeVoice-Realtime-0.5B"
-  print("✅ Model loaded from local storage.")
-else:
-  MODEL_PATH = "microsoft/VibeVoice-Realtime-0.5B"
+MODEL_PATH = "microsoft/VibeVoice-Realtime-0.5B"
 
 PROCESSOR = VibeVoiceStreamingProcessor.from_pretrained(MODEL_PATH)
 MODEL = VibeVoiceStreamingForConditionalGenerationInference.from_pretrained(
